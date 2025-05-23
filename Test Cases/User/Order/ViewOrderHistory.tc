@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ViewOrderHistory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>29a7d56c-7f8a-4ee1-a3f9-15d229fbfb0e</testCaseGuid>
+</TestCaseEntity>

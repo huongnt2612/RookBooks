@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>cart_icon_x</name>
+   <tag></tag>
+   <elementGuidId>4e1adfd6-96c5-4a4d-80f6-a76aff30dca9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[normalize-space()='X']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//a[normalize-space()='X']</value>
+      <webElementGuid>f712af85-670c-43f9-bb54-936068993f7e</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

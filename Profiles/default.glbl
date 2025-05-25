@@ -39,4 +39,11 @@
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'linh@gmail.com'</initValue>
+      <name>Admin_Email</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

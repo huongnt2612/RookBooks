@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LO03_register_successfully</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c3b6b8a8-aa43-42db-b1e7-5c224529f804</testCaseGuid>
+</TestCaseEntity>

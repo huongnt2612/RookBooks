@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SearchProductByKey</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>efcfdfe1-c666-4273-a69f-f11765f6c06e</testCaseGuid>
-</TestCaseEntity>

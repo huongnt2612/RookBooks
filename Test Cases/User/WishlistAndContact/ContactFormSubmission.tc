@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ContactFormSubmission</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cf9d58ea-6525-4ee8-b288-9bd02d6398ef</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>PlaceOrder</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>4766483b-6a23-4079-9e7d-55f6f20f98aa</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_ClickAddCategory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2ed6f74c-c2b5-41a4-9e55-c57ed7eb42c5</testCaseGuid>
+</TestCaseEntity>

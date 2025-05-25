@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_ViewCategoryList</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>939b8e01-f443-4d19-8d03-c40b254cc58c</testCaseGuid>
+</TestCaseEntity>

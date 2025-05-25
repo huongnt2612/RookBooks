@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SearchProductByCategories</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>0eeefd68-f01f-445f-8570-72466a0baac0</testCaseGuid>
-</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>ViewFavoriteProducts</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>b3673291-b0af-4184-831e-aeef3594ff70</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_ClickUpdateCategory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>52911bf2-ae7c-4a7e-a76d-9146f50a9819</testCaseGuid>
+</TestCaseEntity>

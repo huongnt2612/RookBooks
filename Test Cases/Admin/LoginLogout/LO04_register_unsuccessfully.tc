@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LO04_register_unsuccessfully</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5d1cda13-ca97-4637-bd36-7b6192ebdc38</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_ViewBookList</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ce8c8c1a-dce3-4315-bf13-1df569c1cdcf</testCaseGuid>
+</TestCaseEntity>

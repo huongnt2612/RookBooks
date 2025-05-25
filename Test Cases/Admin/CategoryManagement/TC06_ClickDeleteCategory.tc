@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_ClickDeleteCategory</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c903f3e0-95de-447d-b7e1-2a45beff098e</testCaseGuid>
+</TestCaseEntity>

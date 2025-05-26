@@ -16,4 +16,4 @@ import openLoginPage
 	WebUI.delay(2)
 
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	WebUI.verifyElementText(findTestObject('Object Repository/User/Account/account_name'), "NGUYEN DUY LINH")
+	WebUI.verifyElementText(findTestObject('Object Repository/User/wishlistAndContact/account_name'), "NGUYEN DUY LINH")

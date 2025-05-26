@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Div_Category_Add_Successful</name>
+   <name>List_Category</name>
    <tag></tag>
-   <elementGuidId>1c6222b0-0e77-445e-8072-374ea2fd0dcd</elementGuidId>
+   <elementGuidId>22dac6f8-c440-476b-9a93-4dc5c4d55652</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@role='alert']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>&#xd;
-</value>
+         <value>//tbody/tr</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@role='alert']</value>
-      <webElementGuid>b4b86c17-939f-4494-ae53-478a4295d404</webElementGuid>
+      <value>//tbody/tr</value>
+      <webElementGuid>570a6e9c-dfef-4ef0-b35a-ad0e9b19daba</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

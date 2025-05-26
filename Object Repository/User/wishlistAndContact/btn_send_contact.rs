@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Div_Category_Add_Successful</name>
+   <name>btn_send_contact</name>
    <tag></tag>
-   <elementGuidId>1c6222b0-0e77-445e-8072-374ea2fd0dcd</elementGuidId>
+   <elementGuidId>12f76574-6abd-4a61-86e5-a4ca7c7ac631</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@role='alert']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>&#xd;
-</value>
+         <value>//button[contains(text(),'Gửi')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@role='alert']</value>
-      <webElementGuid>b4b86c17-939f-4494-ae53-478a4295d404</webElementGuid>
+      <value>//button[contains(text(),'Gửi')]</value>
+      <webElementGuid>25803fe3-cd61-447a-9096-ea8c60fe265a</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

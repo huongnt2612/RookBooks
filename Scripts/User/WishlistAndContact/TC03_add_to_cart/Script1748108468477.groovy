@@ -13,7 +13,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	String excelPath = 'Data Files/Data.xlsx'
 	WebDriver driver = DriverFactory.getWebDriver()
 	
-	String baseXpath = findTestObject('Object Repository/User/Account/wishlist_btn_add_cart').findPropertyValue('xpath')
+	String baseXpath = findTestObject('Object Repository/User/wishlistAndContact/wishlist_btn_add_cart').findPropertyValue('xpath')
 	List<WebElement> buttonList = driver.findElements(By.xpath(baseXpath))
 	
 	// Duyệt và click từng button

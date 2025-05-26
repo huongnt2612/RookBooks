@@ -5,16 +5,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 import dataFileUtil
 
-//	new openLoginPage().navigateToLogin()
-	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
+	new openLoginPage().navigateToLogin()
+	generalFunction fc = new generalFunction()
+
+	WebUI.delay(3)
+	
+	WebUI.click(findTestObject('Object Repository/User/Auth/btn_forget_pass'))
+	fc.scrollDown()
 
 	WebUI.delay(3)
 	
 //	WebUI.click(findTestObject('Object Repository/User/Auth/btn_forget_pass'))
 //	fc.scrollDown()
-	String email = "huong2@gmail.com"
+	String email = "huong3@gmail.com"
 	String name = "Nguyen Thi Thanh Huong"
 	String address = "Ha Noi"
 	String phone = "0123456789"

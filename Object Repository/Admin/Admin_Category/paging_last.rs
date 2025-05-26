@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Div_Category_Add_Successful</name>
+   <name>paging_last</name>
    <tag></tag>
-   <elementGuidId>1c6222b0-0e77-445e-8072-374ea2fd0dcd</elementGuidId>
+   <elementGuidId>fcdd92bd-c5a2-4acd-ac76-3bca984e690f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@role='alert']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>&#xd;
-</value>
+         <value>(//a[@class='page-link'][contains(text(),'Trang')])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@role='alert']</value>
-      <webElementGuid>b4b86c17-939f-4494-ae53-478a4295d404</webElementGuid>
+      <value>(//a[@class='page-link'][contains(text(),'Trang')])[2]</value>
+      <webElementGuid>3dbc08dc-afa2-415c-a75a-dc9cd64e04bf</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

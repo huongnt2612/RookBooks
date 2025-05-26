@@ -5,6 +5,8 @@ import internal.GlobalVariable
 import generalFunction
 import openLoginPage
 
+	new openLoginPage().navigateToLogin()
+	
 	'1. Để trống cả email và mật khẩu'
 //	new openLoginPage().navigateToLogin()
 	WebUI.click(findTestObject('User/Auth/btn_login'))

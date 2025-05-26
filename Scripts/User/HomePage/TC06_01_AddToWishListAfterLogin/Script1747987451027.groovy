@@ -4,8 +4,8 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.model.FailureHandling
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-WebUI.openBrowser('http://localhost:8080/login')
-WebUI.maximizeWindow()
+	new openLoginPage().navigateToLogin()
+
 
 
 WebUI.setText(findTestObject("Page_Login/Input_Username"), "linh@gmail.com")
@@ -34,4 +34,3 @@ if (WebUI.verifyAlertPresent(5, FailureHandling.OPTIONAL)) {
 	WebUI.comment("Không có alert được hiển thị")
 }
 
-WebUI.closeBrowser()

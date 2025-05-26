@@ -50,20 +50,20 @@ import generalFunction
 	
 	WebUI.delay(3)
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	WebUI.click(findTestObject('Object Repository/User/Account/btn_wishlist'))
+	WebUI.click(findTestObject('Object Repository/User/wishlistAndContact/btn_wishlist'))
 	WebUI.delay(2)
 	fc.scrollDown()
 	
 	String expectedTitle = util.getData(excelPath, 'AddToWishlist_Tittle2')
 	String expectedPrice = util.getData(excelPath, 'AddToWishlist_Price2')
 
-	String actualTitle = WebUI.getText(findTestObject('Object Repository/User/Account/wishlist_product_name'))
-	String actualPrice = WebUI.getText(findTestObject('Object Repository/User/Account/wishlist_product_price'))
+	String actualTitle = WebUI.getText(findTestObject('Object Repository/User/wishlistAndContact/wishlist_product_name'))
+	String actualPrice = WebUI.getText(findTestObject('Object Repository/User/wishlistAndContact/wishlist_product_price'))
 	
 	WebUI.verifyMatch(actualTitle, expectedTitle, false, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyMatch(actualPrice, expectedPrice, false, FailureHandling.CONTINUE_ON_FAILURE)
 	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Account/wishlist_btn_add_cart'), FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Account/wishlist_x'), FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyElementVisible(findTestObject('Object Repository/User/wishlistAndContact/wishlist_btn_add_cart'), FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyElementVisible(findTestObject('Object Repository/User/wishlistAndContact/wishlist_x'), FailureHandling.CONTINUE_ON_FAILURE)
 	
 	

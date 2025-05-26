@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Div_Category_Add_Successful</name>
+   <name>cart_product_quantity_updown</name>
    <tag></tag>
-   <elementGuidId>1c6222b0-0e77-445e-8072-374ea2fd0dcd</elementGuidId>
+   <elementGuidId>895f03d0-e63a-461f-b02c-51f0af291409</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@role='alert']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>&#xd;
-</value>
+         <value>//*[@id=&quot;wrapper&quot;]/div[3]/div/div/div/div[1]/table/tbody/tr/td[4]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@role='alert']</value>
-      <webElementGuid>b4b86c17-939f-4494-ae53-478a4295d404</webElementGuid>
+      <value>//*[@id=&quot;wrapper&quot;]/div[3]/div/div/div/div[1]/table/tbody/tr/td[4]/input</value>
+      <webElementGuid>2c9d7168-7e80-425e-828e-f7a72ad3212e</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

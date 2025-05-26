@@ -18,12 +18,17 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
+	new openPage().navigateToHomePage()
+	generalFunction fc = new generalFunction()
+	dataFileUtil util = new dataFileUtil()
+	String excelPath = 'Data Files/Data.xlsx'
+	
 
-	WebUI.scrollToElement(findTestObject('Homepage/Section_BestSeller'), 5)
+
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Section_BestSeller'), 5)
+
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductSalePrice'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductOriginalPrice'), 5)
+	
+	
+	
 	

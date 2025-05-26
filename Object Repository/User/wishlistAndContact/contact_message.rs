@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Div_Category_Add_Successful</name>
+   <name>contact_message</name>
    <tag></tag>
-   <elementGuidId>1c6222b0-0e77-445e-8072-374ea2fd0dcd</elementGuidId>
+   <elementGuidId>dbbaa444-179d-4a5a-bd77-fe1471fa46b8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
          <value>//div[@role='alert']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>&#xd;
-</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,6 +19,6 @@
       <name>xpath</name>
       <type>Main</type>
       <value>//div[@role='alert']</value>
-      <webElementGuid>b4b86c17-939f-4494-ae53-478a4295d404</webElementGuid>
+      <webElementGuid>7d49073e-b5af-4484-bec2-b678d3614ba0</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

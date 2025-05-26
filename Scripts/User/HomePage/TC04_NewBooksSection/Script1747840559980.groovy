@@ -17,12 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('http://localhost:8080')
-WebUI.maximizeWindow()
 
-WebUI.scrollToElement(findTestObject('Homepage/Section_NewBooks'), 5)
-
-WebUI.verifyElementPresent(findTestObject('Homepage/Section_NewBooks'), 5)
-WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
-
-WebUI.closeBrowser()
+	
+	WebUI.scrollToElement(findTestObject('Homepage/Section_NewBooks'), 5)
+	
+	WebUI.verifyElementPresent(findTestObject('Homepage/Section_NewBooks'), 5)
+	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
+	

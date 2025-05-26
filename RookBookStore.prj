@@ -6,9 +6,9 @@
    <UUID>425701d9-b944-4ae5-b32c-cfda09487e92</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
    <createdVersion>10.2.0</createdVersion>
-   <freeLicense>false</freeLicense>
+   <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
-   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedEdition>FREE</modifiedEdition>
    <modifiedVersion>10.2.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <projectFileLocation>D:\DoAn\Katalon-Test\RookBookStore\RookBookStore.prj</projectFileLocation>

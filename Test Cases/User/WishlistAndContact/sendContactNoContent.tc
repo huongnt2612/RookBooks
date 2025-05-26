@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>RemoveFromCart</name>
+   <name>sendContactNoContent</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>55552c36-d8f1-4689-be21-90256dfeba0e</testCaseGuid>
+   <testCaseGuid>1968c2e4-085d-41bd-809c-e8cb03068b56</testCaseGuid>
 </TestCaseEntity>

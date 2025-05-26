@@ -3,6 +3,8 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import com.github.kklisura.cdt.protocol.types.page.Navigate
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -16,14 +18,37 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import generalFunction
+
+	generalFunction fc = new generalFunction()
 
 
+	WebUI.openBrowser('')
+	WebUI.navigateToUrl(GlobalVariable.HomePage_url)
+	WebUI.maximizeWindow()
+	WebUI.delay(2)
 
-	WebUI.scrollToElement(findTestObject('Homepage/Section_BestSeller'), 5)
+
+	WebUI.deleteAllCookies()
+	fc.scrollDown()
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Section_BestSeller'), 5)
+	WebUI.delay(2)
+	TestObject productBlock = findTestObject('User/Product/product_block')
+	WebUI.mouseOver(productBlock)
+	WebUI.delay(1)
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductSalePrice'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductOriginalPrice'), 5)
+	// click add to cart thi hover
+	WebUI.click(findTestObject('Object Repository/User/Product/btn_add_to_cart'),  FailureHandling.CONTINUE_ON_FAILURE)
 	
+	WebUI.waitForAlert(5)
+	String alertText = WebUI.getAlertText()
+	WebUI.verifyMatch(alertText, 'Bạn cần đăng nhập trước', false)
+	WebUI.acceptAlert()
+	WebUI.delay(2)
+	fc.scrollDown()
+	
+	// Kiểm tra hệ thốngchuyển hướng đến trang đăng nhập
+	
+	String currentUrl = WebUI.getUrl()
+	boolean matched = WebUI.verifyMatch(currentUrl.toLowerCase(), '.*login.*', true, FailureHandling.CONTINUE_ON_FAILURE)
+

@@ -17,13 +17,3 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
-
-	WebUI.scrollToElement(findTestObject('Homepage/Section_BestSeller'), 5)
-	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Section_BestSeller'), 5)
-	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductSalePrice'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductOriginalPrice'), 5)
-	

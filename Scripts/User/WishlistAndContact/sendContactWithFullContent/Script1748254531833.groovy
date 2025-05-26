@@ -18,12 +18,37 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
+	new openPage().navigateToHomePage()
+	generalFunction fc = new generalFunction()
+	dataFileUtil util = new dataFileUtil()
+	String excelPath = 'Data Files/Data.xlsx'
+	
+	String fullName = "Thanh Hường"
+	String email = "huong@gmail.com"
+	String subject = "send contact"
+	String message = "send contact message"
+	
+	WebUI.click(findTestObject('Object Repository/User/HomePage/nav_contact'))
+	WebUI.delay(2)
+	fc.scrollDown()
+	
+	'1. full content'
+	// Điền form Contact - bạn thay đúng TestObject tên các trường
+	WebUI.setText(findTestObject('Object Repository/User/wishlistAndContact/textbox_fullname'), fullName)
+	WebUI.setText(findTestObject('Object Repository/User/wishlistAndContact/textbox_email'), email)
+	WebUI.setText(findTestObject('Object Repository/User/wishlistAndContact/textbox_tittle'), subject)
+	WebUI.setText(findTestObject('Object Repository/User/wishlistAndContact/textbox_msg'), message)
+	
+	WebUI.click(findTestObject('Object Repository/User/wishlistAndContact/btn_send_contact'))
+	fc.scrollDown()
+	
+	WebUI.verifyEqual(findTestObject('Object Repository/User/wishlistAndContact/contact_message'), 'Cảm ơn bạn đã liên hệ')
+	
 
-	WebUI.scrollToElement(findTestObject('Homepage/Section_BestSeller'), 5)
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Section_BestSeller'), 5)
+
 	
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductTitle'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductSalePrice'), 5)
-	WebUI.verifyElementPresent(findTestObject('Homepage/Text_ProductOriginalPrice'), 5)
+	
+	
+	
 	

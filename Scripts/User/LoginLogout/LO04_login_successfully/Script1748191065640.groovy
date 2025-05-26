@@ -6,7 +6,7 @@ import generalFunction
 import openLoginPage
 import dataFileUtil
 
-//	new openLoginPage().navigateToLogin()
+	new openLoginPage().navigateToLogin()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	String email = util.getData(excelPath, 'register_email')
@@ -22,6 +22,6 @@ import dataFileUtil
 	WebUI.delay(2)
 
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	WebUI.verifyElementText(findTestObject('Object Repository/User/Account/account_name'), name)
+	WebUI.verifyElementText(findTestObject('Object Repository/User/wishlistAndContact/account_name'), name.toUpperCase())
 
 	WebUI.closeBrowser()

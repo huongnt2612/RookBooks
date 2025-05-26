@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC04_ClickAddCategory</name>
+   <name>ViewListUser</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>2ed6f74c-c2b5-41a4-9e55-c57ed7eb42c5</testCaseGuid>
+   <testCaseGuid>f7297eec-1569-4f6a-b39d-3a94207c50f5</testCaseGuid>
 </TestCaseEntity>

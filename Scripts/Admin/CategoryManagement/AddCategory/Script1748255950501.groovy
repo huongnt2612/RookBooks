@@ -38,6 +38,7 @@ import internal.GlobalVariable as GlobalVariable
 	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_List'))
 	WebUI.delay(3)
 	
+	'1. Add Category'
 	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Add'))
 	
 	WebUI.verifyMatch(WebUI.getUrl(), '.*categories_management.*', true)
@@ -75,6 +76,43 @@ import internal.GlobalVariable as GlobalVariable
 	
 	WebUI.verifyMatch(lastCategoryName, expectedName, false, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyMatch(lastCategoryDesc, expectedDesc, false, FailureHandling.CONTINUE_ON_FAILURE)
+	
+	'2. Add Category'
+	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Management'))
+	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Add'))
+	
+	WebUI.setText(findTestObject('Object Repository/Admin/Admin_Category/Input_Category_Name'), name)
+	WebUI.setText(findTestObject('Object Repository/Admin/Admin_Category/Input_Category_Description'), desc)
+	
+	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Add_Submit'))
+	WebUI.delay(2)
+	WebUI.verifyElementText(findTestObject('Object Repository/Admin/Admin_Category/Div_Category_Add_Successful'), "Thêm mới danh mục thành công")
+	
+	GlobalVariable.CategoryIndex = index + 1
+	
+	util.setData(excelPath, 'AddCategory_name1', name)
+	util.setData(excelPath, 'AddCategory_desc1', desc)
+	
+	//Đến cuối trang
+	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
+	WebUI.delay(2)
+	
+	TestObject listCategoryName = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Name')
+	List<WebElement> categories = WebUiCommonHelper.findWebElements(listCategoryName, 10)
+	WebElement lastCategory = categories.get(categories.size() - 1)
+	String lastCategoryName = lastCategory.getText().trim()
+	
+	TestObject listCategoryDesc = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Desc')
+	categories = WebUiCommonHelper.findWebElements(listCategoryDesc, 10)
+	lastCategory = categories.get(categories.size() - 1)
+	String lastCategoryDesc = lastCategory.getText().trim()
+	
+	String expectedName = util.getData(excelPath, 'AddCategory_name1')
+	String expectedDesc = util.getData(excelPath, 'AddCategory_desc1')
+	
+	WebUI.verifyMatch(lastCategoryName, expectedName, false, FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyMatch(lastCategoryDesc, expectedDesc, false, FailureHandling.CONTINUE_ON_FAILURE)
+	
 	
 	
 	

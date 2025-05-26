@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC02_ViewCategoryList</name>
+   <name>UpdateUser</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>939b8e01-f443-4d19-8d03-c40b254cc58c</testCaseGuid>
+   <testCaseGuid>04865786-1f99-4424-b268-bba81c15eb97</testCaseGuid>
 </TestCaseEntity>

@@ -19,10 +19,10 @@ import internal.GlobalVariable as GlobalVariable
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	
-	int index = GlobalVariable.CategoryIndex
-	
+
+	'1. Thêm danh mục đã tồn tại'
 	// Tạo tên và mô tả danh mục
-	String name = "Category" + index
+	String name = util.getData(excelPath, 'Category_1')
 	String desc = "This is " + name
 	
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
@@ -49,32 +49,7 @@ import internal.GlobalVariable as GlobalVariable
 	
 	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Add_Submit'))
 	WebUI.delay(2)
-	WebUI.verifyElementText(findTestObject('Object Repository/Admin/Admin_Category/Div_Category_Add_Successful'), "Thêm mới danh mục thành công")
+	WebUI.verifyElementText(findTestObject('Object Repository/Admin/Admin_Category/Div_Category_Add_Successful'), "Danh mục đã tồn tại", FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.takeScreenshot()
 	
-	GlobalVariable.CategoryIndex = index + 1
-	
-	util.setData(excelPath, 'AddCategory_name1', name)
-	util.setData(excelPath, 'AddCategory_desc1', desc)
-	
-	//Đến cuối trang
-	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
-	WebUI.delay(2)
-	
-	TestObject listCategoryName = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Name')
-	List<WebElement> categories = WebUiCommonHelper.findWebElements(listCategoryName, 10)
-	WebElement lastCategory = categories.get(categories.size() - 1)
-	String lastCategoryName = lastCategory.getText().trim()
-	
-	TestObject listCategoryDesc = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Desc')
-	categories = WebUiCommonHelper.findWebElements(listCategoryDesc, 10)
-	lastCategory = categories.get(categories.size() - 1)
-	String lastCategoryDesc = lastCategory.getText().trim()
-	
-	String expectedName = util.getData(excelPath, 'AddCategory_name1')
-	String expectedDesc = util.getData(excelPath, 'AddCategory_desc1')
-	
-	WebUI.verifyMatch(lastCategoryName, expectedName, false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(lastCategoryDesc, expectedDesc, false, FailureHandling.CONTINUE_ON_FAILURE)
-	
-	
-	
+

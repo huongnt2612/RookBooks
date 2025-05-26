@@ -6,11 +6,12 @@
    <elementGuidId>5b0c1817-b606-4617-bba1-6bc638aed02f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//input[@id='categoryName']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

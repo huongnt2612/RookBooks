@@ -41,9 +41,9 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'linh@gmail.com'</initValue>
-      <name>Admin_Email</name>
+      <initValue>1</initValue>
+      <name>CategoryIndex</name>
       <protected>false</protected>
-      <valueType>STRING</valueType>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

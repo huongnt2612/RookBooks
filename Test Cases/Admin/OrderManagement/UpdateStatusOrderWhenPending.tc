@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>LO03_register_successfully</name>
+   <name>UpdateStatusOrderWhenPending</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>c3b6b8a8-aa43-42db-b1e7-5c224529f804</testCaseGuid>
+   <testCaseGuid>882c68cc-ebc0-4f96-8180-d9c2fb3097cd</testCaseGuid>
 </TestCaseEntity>

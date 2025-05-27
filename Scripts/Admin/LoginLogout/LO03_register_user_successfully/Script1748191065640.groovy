@@ -5,8 +5,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
+	
 	new openLoginPage().navigateToLogin()
 	generalFunction fc = new generalFunction()
+	
 
 	WebUI.delay(3)
 	
@@ -18,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 //	WebUI.click(findTestObject('Object Repository/User/Auth/btn_forget_pass'))
 //	fc.scrollDown()
 	
-	String baseEmail = "huong3@gmail.com"
+	String baseEmail = "huong2@gmail.com"
 	int emailIndex = 1 
 	
 	// Tách local part và domain
@@ -46,14 +48,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/User/Auth/msg_result_register'), "Đăng ký thành công !")
 	String 
-	util.setData(excelPath, 'register_email', email)
-	util.setData(excelPath, 'register_name', name)
-	util.setData(excelPath, 'register_address', address)
-	util.setData(excelPath, 'register_phone', phone)
-	util.setData(excelPath, 'register_password', password)
+	util.setData(excelPath, 'register_email_user', email)
+	util.setData(excelPath, 'register_name_user', name)
+	util.setData(excelPath, 'register_address_user', address)
+	util.setData(excelPath, 'register_phone_user', phone)
+	util.setData(excelPath, 'register_password_user', password)
 	
-	fc.scrollDown()
-	WebUI.click(findTestObject('Object Repository/User/Auth/btn_forget_pass'))
-	fc.scrollDown()
 	
 	

@@ -75,7 +75,7 @@ import internal.GlobalVariable as GlobalVariable
 	
 	WebUI.delay(2)
 	
-	// Lấy danh sách tên danh mục trên trang cuối
+	//	 Lấy danh sách tên danh mục trên trang cuối
 	listCategoryName = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Name')
 	categoryElements = WebUiCommonHelper.findWebElements(listCategoryName, 10)
 	

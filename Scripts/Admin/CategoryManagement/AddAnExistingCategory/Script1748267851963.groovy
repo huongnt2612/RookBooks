@@ -27,6 +27,9 @@ import internal.GlobalVariable as GlobalVariable
 	
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
 	
+	
+	//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
 	
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))

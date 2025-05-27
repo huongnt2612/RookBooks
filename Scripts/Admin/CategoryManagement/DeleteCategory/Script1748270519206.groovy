@@ -69,7 +69,10 @@ import internal.GlobalVariable as GlobalVariable
 	
 
 	//Đến cuối trang
+	//	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
+
 	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
+	
 	WebUI.delay(2)
 	
 	// Lấy danh sách tên danh mục trên trang cuối

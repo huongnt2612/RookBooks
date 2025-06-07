@@ -50,10 +50,9 @@ import internal.GlobalVariable as GlobalVariable
 	for (int i = 0; i < maxRows; i++) {
 		WebElement row = orderRows.get(i)
 		
-		// Giả sử mỗi cột là một thẻ <td>, lấy dữ liệu từng cột
 		List<WebElement> cols = row.findElements(By.tagName("td"))
 		
-		// Lấy dữ liệu từng cột theo vị trí cột bạn cần:
+		// Lấy dữ liệu từng cột 
 		String orderId = cols.get(0).getText().trim()
 		String orderCode = cols.get(1).getText().trim()
 		String receiver = cols.get(2).getText().trim()
@@ -64,7 +63,6 @@ import internal.GlobalVariable as GlobalVariable
 		String status = cols.get(7).getText().trim()
 		String paymentMethod = cols.get(8).getText().trim()
 		
-		// Ghi dữ liệu vào excel, bạn đặt key theo mẫu
 		util.setData(excelPath, "OrderID" + (i+1), orderId)
 		util.setData(excelPath, "OrderCode" + (i+1), orderCode)
 		util.setData(excelPath, "Receiver" + (i+1), receiver)

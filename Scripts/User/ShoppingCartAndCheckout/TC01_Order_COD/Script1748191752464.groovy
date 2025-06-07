@@ -40,10 +40,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Order/order_VNPay'))
 	WebUI.delay(2)
 	'1. Đặt hàng theo phương thức thanh toán COD'
-	
 	WebUI.click(findTestObject('Object Repository/User/Order/order_COD'))
 	WebUI.delay(2)
-	
 	WebUI.click(findTestObject('Object Repository/User/Order/order_now'))
 	
 

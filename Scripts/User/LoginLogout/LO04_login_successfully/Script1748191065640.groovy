@@ -24,4 +24,3 @@ import dataFileUtil
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
 	WebUI.verifyElementText(findTestObject('Object Repository/User/wishlistAndContact/account_name'), name.toUpperCase())
 
-	WebUI.closeBrowser()

@@ -15,5 +15,5 @@ import openLoginPage
 	WebUI.click(findTestObject('Object Repository/User/Auth/btn_login'))
 	WebUI.delay(2)
 
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+
 

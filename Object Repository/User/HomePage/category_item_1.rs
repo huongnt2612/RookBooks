@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>(//div[contains(@class,'col-lg-3 col-md-4 col-sm-6 col-12')])[19]</value>
+         <value>//*[@id=&quot;wrapper&quot;]/section[1]/div/div[2]/div[1]/div/div[20]/div/div</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>(//div[contains(@class,'col-lg-3 col-md-4 col-sm-6 col-12')])[19]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -22,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[contains(@class,'col-lg-3 col-md-4 col-sm-6 col-12')])[19]</value>
-      <webElementGuid>66c6ffab-fb37-4b15-9992-56d5f367e45a</webElementGuid>
+      <value>//*[@id=&quot;wrapper&quot;]/section[1]/div/div[2]/div[1]/div/div[20]/div/div</value>
+      <webElementGuid>c1ef2077-e383-48e5-a129-c5761bb3d69f</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

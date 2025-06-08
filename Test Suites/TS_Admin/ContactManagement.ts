@@ -1,49 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>PostManagement</name>
+   <name>ContactManagement</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>3</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>95e67de8-5dbe-4632-bd6f-fccb82d3faa3</testSuiteGuid>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>f8707be1-6542-40bd-9466-613512087061</testSuiteGuid>
    <testCaseLink>
-      <guid>fbb2df21-85aa-4f77-9895-f0a3fcc9720f</guid>
+      <guid>95e44ea9-4600-48c9-9ad2-a127c8e00470</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/PostManagement/ViewListPost</testCaseId>
+      <testCaseId>Test Cases/Admin/ContactManagement/ViewListContactManagement</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>6e5e15c2-9cea-4adb-a269-f330918cdf4e</guid>
+      <guid>9f35bdfb-0d77-453c-a367-00cff84c65e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/PostManagement/SearchByKey</testCaseId>
+      <testCaseId>Test Cases/Admin/ContactManagement/SortContact</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>76ca5664-0970-4818-a806-f4bf47fe8dd0</guid>
+      <guid>61579a71-53cc-48e7-82d2-d173594022ac</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/PostManagement/AddPost</testCaseId>
+      <testCaseId>Test Cases/Admin/ContactManagement/ReplyContact</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8e057603-5977-40d8-899d-1dc3bf25d0cd</guid>
+      <guid>891b3b80-ac0d-4666-9f1a-8c4c68d600f5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/PostManagement/UpdatePost</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>6a071849-f104-4bae-b203-88676aa5fbde</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/PostManagement/DeletePost</testCaseId>
+      <testCaseId>Test Cases/Admin/ContactManagement/DeleteContact</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

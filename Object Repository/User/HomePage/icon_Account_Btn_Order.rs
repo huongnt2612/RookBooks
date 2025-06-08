@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>order_now</name>
+   <name>icon_Account_Btn_Order</name>
    <tag></tag>
-   <elementGuidId>a3f63308-5ea3-4d34-977e-fab9a3a3a3e6</elementGuidId>
+   <elementGuidId>6624da4c-b97a-48cf-a71b-c56baa576990</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(text(),'đặt hàng')]</value>
+         <value>//a[contains(text(),'Đơn hàng')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(text(),'đặt hàng')]</value>
-      <webElementGuid>98f20fda-6a2e-49e3-8873-1ae77a8c6771</webElementGuid>
+      <value>//a[contains(text(),'Đơn hàng')]</value>
+      <webElementGuid>95055791-5db0-4d4b-b12d-8fc50b5cb7d8</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

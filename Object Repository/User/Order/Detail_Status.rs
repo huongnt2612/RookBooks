@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>order_now</name>
+   <name>Detail_Status</name>
    <tag></tag>
-   <elementGuidId>a3f63308-5ea3-4d34-977e-fab9a3a3a3e6</elementGuidId>
+   <elementGuidId>2079d156-de9b-4b56-99fd-e9e4f89c3387</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(text(),'đặt hàng')]</value>
+         <value>//*[@id=&quot;wrapper&quot;]/div[3]/div/div/div/div/div[1]/p[6]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(text(),'đặt hàng')]</value>
-      <webElementGuid>98f20fda-6a2e-49e3-8873-1ae77a8c6771</webElementGuid>
+      <value>//*[@id=&quot;wrapper&quot;]/div[3]/div/div/div/div/div[1]/p[6]/span</value>
+      <webElementGuid>241cd7cc-1711-4045-a6db-964e59426e80</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

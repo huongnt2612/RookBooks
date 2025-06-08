@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>order_now</name>
+   <name>Button_Cancel_Order</name>
    <tag></tag>
-   <elementGuidId>a3f63308-5ea3-4d34-977e-fab9a3a3a3e6</elementGuidId>
+   <elementGuidId>8c93a03b-fcde-4d75-835d-b3f797b49194</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(text(),'đặt hàng')]</value>
+         <value>//a[contains(text(),'Huỷ đơn')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(text(),'đặt hàng')]</value>
-      <webElementGuid>98f20fda-6a2e-49e3-8873-1ae77a8c6771</webElementGuid>
+      <value>//a[contains(text(),'Huỷ đơn')]</value>
+      <webElementGuid>178795bb-b3fb-4aeb-8199-a40a88794934</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

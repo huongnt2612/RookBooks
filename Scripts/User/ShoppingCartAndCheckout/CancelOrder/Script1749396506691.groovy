@@ -17,9 +17,18 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+
+	generalFunction fc = new generalFunction()
+	dataFileUtil util = new dataFileUtil()
+	String excelPath = 'Data Files/Data.xlsx'
+	
+	WebUI.click(findTestObject('Object Repository/User/Order/Button_Cancel_Order'))
 	WebUI.delay(2)
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/User/Auth/Btn_Logout'))
+	fc.scrollDown()
+	
+	WebUI.verifyElementNotVisible(findTestObject('Object Repository/User/Order/Button_Cancel_Order'))
+	
+	String actualStatus = WebUI.getText(findTestObject('Object Repository/User/Order/Detail_Status')).trim()
+	WebUI.verifyMatch(actualStatus.toUpperCase(), "CANCELLED", false)
 	
 	

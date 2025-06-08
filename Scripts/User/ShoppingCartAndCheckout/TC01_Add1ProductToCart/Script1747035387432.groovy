@@ -2,6 +2,7 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
@@ -34,6 +35,12 @@ import internal.GlobalVariable
 	WebDriver driver = DriverFactory.getWebDriver()
 	List<WebElement> productList = driver.findElements(By.xpath(baseXpath))
 	productList[0].click()
+	
+//	WebElement element = productList[0]
+//	JavascriptExecutor js = (JavascriptExecutor) driver
+//	js.executeScript("arguments[0].scrollIntoView(true);", element)
+//	WebUI.delay(1)
+//	js.executeScript("arguments[0].click();", element)
 	fc.scrollDown()
 	
 	// VERIFY trang chi tiết sản phẩm

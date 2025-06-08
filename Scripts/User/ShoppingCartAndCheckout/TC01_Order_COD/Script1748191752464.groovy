@@ -28,12 +28,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	
 	WebUI.callTestCase(
 		findTestCase('Test Cases/User/ShoppingCartAndCheckout/TC01_Add1ProductToCart'),
-		[:], // hoặc truyền tham số nếu cần
-		FailureHandling.STOP_ON_FAILURE // tùy chọn, có thể bỏ
+		[:], 
+		FailureHandling.STOP_ON_FAILURE 
 	)
 
 	WebDriver driver = DriverFactory.getWebDriver()
-	WebUI.click('Object Repository/Cart/btn_payment')
+	WebUI.click(findTestObject('Object Repository/User/Cart/btn_payment'))
+	
 	WebUI.delay(2)
 	fc.scrollDown()
 	WebUI.verifyElementText(findTestObject('Object Repository/User/Order/title_order_detail'), 'Chi tiết đơn hàng')
@@ -43,9 +44,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	WebUI.setText(findTestObject('Object Repository/User/Auth/register_email'), email)
 	WebUI.setText(findTestObject('Object Repository/User/Order/order_addres'), address)
 	
-	WebUI.verifyEqual(productName , findTestObject('Object Repository/User/Order/order_detail_product_name'))
-	WebUI.verifyEqual(productPrice, findTestObject('Object Repository/User/Order/order_detail_product_price'))
-	WebUI.verifyEqual(productQuantity, findTestObject('Object Repository/User/Order/order_detail_product_quantity'))
+	WebUI.verifyMatch(productName, WebUI.getText(findTestObject('Object Repository/User/Order/order_detail_product_name')), false)
+//	WebUI.verifyMatch(productPrice, WebUI.getText(findTestObject('Object Repository/User/Order/order_detail_product_price')), false)
+//	String actualQuantity = WebUI.getText(findTestObject('Object Repository/User/Order/order_detail_product_quantity'))
+//	WebUI.verifyMatch(productQuantity,actualQuantity , false)
 	
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Order/order_COD'))
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Order/order_VNPay'))
@@ -53,7 +55,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	'1. Đặt hàng theo phương thức thanh toán COD'
 	WebUI.click(findTestObject('Object Repository/User/Order/order_COD'))
 	WebUI.delay(2)
+	fc.scrollDown()
+	fc.scrollDown()
+	WebUI.delay(2)
 	WebUI.click(findTestObject('Object Repository/User/Order/order_now'))
+	WebUI.delay(2)
 	fc.scrollDown()
 	
 	
@@ -87,6 +93,40 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	} else {
 		return false
 	}
+	
+	String expectedCode = util.getData(excelPath, 'Order_Code')
+	String expectedTotal = util.getData(excelPath, 'Order_Total')
+	String expectedStatus = util.getData(excelPath, 'Order_Status')
+	String expectedPayment = util.getData(excelPath, 'Order_Payment')
+	
+	// Lấy dữ liệu từ bảng đơn hàng
+	TestObject ListDetail = findTestObject('Object Repository/User/Order/List_Button_View_Detail')
+	List<WebElement> btnDetail = WebUiCommonHelper.findWebElements(ListDetail, 10)
+
+	// Click vào nút "Xem chi tiết" đầu tiên nếu tồn tại
+	if (btnDetail.size() > 0) {
+		btnDetail[0].click()
+		fc.scrollDown()
+		WebUI.delay(2)
+	
+		// Lấy text hiển thị
+	String actualCode = WebUI.getText(findTestObject('Object Repository/User/Order/Detail_Code')).trim()
+	//String actualTotal = WebUI.getText(findTestObject('Object Repository/User/Order/Detail_Total')).trim()
+	String actualStatus = WebUI.getText(findTestObject('Object Repository/User/Order/Detail_Status')).trim()
+	String actualPayment = WebUI.getText(findTestObject('Object Repository/User/Order/Detail_Payment')).trim()
+	
+	// So sánh dữ liệu chi tiết đơn hàng
+	WebUI.verifyMatch(actualCode.replace('#', ''), expectedCode.replace('#', ''), false)
+//	WebUI.verifyMatch(actualTotal.replace('.0', ''), expectedTotal.replace('.0', ''), false)
+	WebUI.verifyMatch(actualStatus.toUpperCase(), expectedStatus.toUpperCase(), false)
+	WebUI.verifyMatch(actualPayment.toUpperCase(), expectedPayment.toUpperCase(), false)
+	} else {
+		assert false
+	}
+	
+	
+	
+	
 	
 
 

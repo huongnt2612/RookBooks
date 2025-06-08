@@ -28,6 +28,13 @@ import internal.GlobalVariable as GlobalVariable
 	
 	WebUI.click(findTestObject('Object Repository/Admin/ProductManagement/Button_Add_Product'))
 	WebUI.verifyElementText(findTestObject('Object Repository/Admin/ProductManagement/Lable_Form_Add_Product'), 'Thêm/Cập nhật Sản phẩm')
+	WebUI.delay(2)
+	
+	'1. Để trống tất cả các trường'
+	fc.scrollDown()
+	
+	WebUI.click(findTestObject('Object Repository/Admin/ProductManagement/Button_Submit'))
+	
 	
 	
 	

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>List_Button_Product_NotForSale</name>
+   <name>List_Button_Delete</name>
    <tag></tag>
-   <elementGuidId>e368ceb8-ee8b-4c6d-84d7-a483db9eb6b2</elementGuidId>
+   <elementGuidId>0da2e8f4-e6e5-4a6e-a254-178960a54a3c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(text(),'Kích hoạt') or contains(text(),'Không bán')]&#xd;
-</value>
+         <value>(//button[@class='btn btn-danger btn-sm'][normalize-space()='Xóa'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -19,8 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(text(),'Kích hoạt') or contains(text(),'Không bán')]&#xd;
-</value>
-      <webElementGuid>7821c930-7105-48f6-9d4f-dc8b541e983b</webElementGuid>
+      <value>(//button[@class='btn btn-danger btn-sm'][normalize-space()='Xóa'])</value>
+      <webElementGuid>b0393499-1338-4997-a226-0e76ca8c2088</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

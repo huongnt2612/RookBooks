@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>List_Button_Product_NotForSale</name>
+   <name>Button_Submit</name>
    <tag></tag>
-   <elementGuidId>e368ceb8-ee8b-4c6d-84d7-a483db9eb6b2</elementGuidId>
+   <elementGuidId>1ce17279-6270-4e83-bf2a-1eb2be8db1e2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(text(),'Kích hoạt') or contains(text(),'Không bán')]&#xd;
-</value>
+         <value>//button[contains(text(),'Xác nhận')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -19,8 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(text(),'Kích hoạt') or contains(text(),'Không bán')]&#xd;
-</value>
-      <webElementGuid>7821c930-7105-48f6-9d4f-dc8b541e983b</webElementGuid>
+      <value>//button[contains(text(),'Xác nhận')]</value>
+      <webElementGuid>757eed1b-0b05-4444-a743-440131eb644d</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

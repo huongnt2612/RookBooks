@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'linh4@gmail.com'</initValue>
+      <initValue>'huong2@gmail.com'</initValue>
       <name>User_Email</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -20,7 +20,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'linh@gmail.com'</initValue>
+      <initValue>'huong11@gmail.com'</initValue>
       <name>Admin_Email</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

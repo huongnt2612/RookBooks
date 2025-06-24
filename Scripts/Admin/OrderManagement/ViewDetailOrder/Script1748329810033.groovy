@@ -139,26 +139,26 @@ import internal.GlobalVariable as GlobalVariable
 		String uiPaymentMethod = cols.get(8).getText().trim()
 	
 		// Lấy dữ liệu chi tiết đơn hàng đã lưu trong Excel
-	
-		String excelReceiver = util.getData(excelPath, "Người nhận_" + (i+1))
+
+		String excelReceiver = util.getData(excelPath, "Receiver" + (i+1))
 		excelReceiver = (excelReceiver == null) ? "" : excelReceiver.trim()
 		
-		String excelPhone = util.getData(excelPath, "Số điện thoại_" + (i+1))
+		String excelPhone = util.getData(excelPath, "Phone" + (i+1))
 		excelPhone = (excelPhone == null) ? "" : excelPhone.trim()
 		
-		String excelEmail = util.getData(excelPath, "Email_" + (i+1))
+		String excelEmail = util.getData(excelPath, "Email" + (i+1))
 		excelEmail = (excelEmail == null) ? "" : excelEmail.trim()
 		
-		String excelCreateDate = util.getData(excelPath, "Ngày tạo_" + (i+1))
+		String excelCreateDate = util.getData(excelPath, "CreateDate" + (i+1))
 		excelCreateDate = (excelCreateDate == null) ? "" : excelCreateDate.trim()
 		
-		String excelTotalPrice = util.getData(excelPath, "Tổng giá_" + (i+1))
+		String excelTotalPrice = util.getData(excelPath, "TotalPrice" + (i+1))
 		excelTotalPrice = (excelTotalPrice == null) ? "" : excelTotalPrice.trim()
 		
-		String excelStatus = util.getData(excelPath, "Trạng thái_" + (i+1))
+		String excelStatus = util.getData(excelPath, "Status" + (i+1))
 		excelStatus = (excelStatus == null) ? "" : excelStatus.trim()
 		
-		String excelPaymentMethod = util.getData(excelPath, "Phương thức thanh toán_" + (i+1))
+		String excelPaymentMethod = util.getData(excelPath, "PaymentMethod" + (i+1))
 		excelPaymentMethod = (excelPaymentMethod == null) ? "" : excelPaymentMethod.trim()
 
 	

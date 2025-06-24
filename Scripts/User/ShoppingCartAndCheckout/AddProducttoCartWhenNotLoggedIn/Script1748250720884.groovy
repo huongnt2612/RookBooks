@@ -35,7 +35,7 @@ import generalFunction
 	WebUI.delay(2)
 	TestObject productBlock = findTestObject('User/Product/product_block')
 	WebUI.mouseOver(productBlock)
-	WebUI.delay(1)
+	WebUI.delay(2)
 	
 	// click add to cart thi hover
 	WebUI.click(findTestObject('Object Repository/User/Product/btn_add_to_cart'),  FailureHandling.CONTINUE_ON_FAILURE)

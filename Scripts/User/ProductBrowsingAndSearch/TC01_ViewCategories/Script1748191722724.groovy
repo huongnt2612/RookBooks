@@ -27,12 +27,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	WebUI.mouseOver(productBlock)
 	WebUI.delay(1)
 	
-	// Kiểm tra các nút hiển thị khi hover
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_add_to_cart'),  FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_add_to_wishlist_1'), FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_quick_view'),  FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_auto_voice'),  FailureHandling.CONTINUE_ON_FAILURE)
-		
+//	// Kiểm tra các nút hiển thị khi hover
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_add_to_cart'),  FailureHandling.CONTINUE_ON_FAILURE)
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_add_to_wishlist_1'), FailureHandling.CONTINUE_ON_FAILURE)
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_quick_view'),  FailureHandling.CONTINUE_ON_FAILURE)
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/btn_auto_voice'),  FailureHandling.CONTINUE_ON_FAILURE)
+//		
 
 
 

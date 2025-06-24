@@ -10,31 +10,31 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable as GlobalVariable
 
-	WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
-	
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
+//	
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	
-	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Management'), 3)
-	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Management'))
-	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_List'), 3)
-	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_List'))
-	WebUI.delay(3)
-
-	//Đến trang cuối
-	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
-	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	
+//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Management'), 3)
+//	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_Management'))
+//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_List'), 3)
+//	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/Button_Category_List'))
+//	WebUI.delay(3)
+//
+//	//Đến trang cuối
+//	WebUI.click(findTestObject('Object Repository/Admin/Admin_Category/paging_last'))
+//	WebUI.delay(2)
 	
 	//Lấy tên danh mục cuối cùng trước khi xóa 
 	TestObject listCategoryName = findTestObject('Object Repository/Admin/Admin_Category/List_Category_Name')

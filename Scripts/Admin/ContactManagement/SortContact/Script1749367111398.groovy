@@ -13,19 +13,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable as GlobalVariable
 
-	WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
-	
-
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact'))
-	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact_Management'))
-	WebUI.delay(2)
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
+//	
+//
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact'))
+//	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact_Management'))
+//	WebUI.delay(2)
 	
 	// === Chọn Sort By "Cũ nhất" ===
 	TestObject sortDropdown = findTestObject('Object Repository/Admin/ContactManagement/Dropdown_SortBy')

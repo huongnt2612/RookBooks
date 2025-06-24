@@ -37,8 +37,8 @@ import dataFileUtil
 	String Price1 = WebUI.getText(findTestObject('Object Repository/User/Product/product_detail_price'))
 	
 	
-	WebUI.setText(findTestObject('Object Repository/User/input_quantity'), '2')  // Đặt số lượng là 2
-	String Quantity1 = WebUI.getText(findTestObject('Object Repository/User/input_quantity'))
+	WebUI.setText(findTestObject('Object Repository/User/Cart/input_quantity'), '2')  // Đặt số lượng là 2
+	String Quantity1 = WebUI.getText(findTestObject('Object Repository/User/Cart/input_quantity'))
 	
 	// lưu trong Excel
 	util.setData(excelPath, 'AddToCard_Tittle2', Title1)
@@ -71,9 +71,9 @@ import dataFileUtil
 //	int expectedQuantityInt = Integer.parseInt(expectedQuantity)
 //	int expectedTotal = expectedPriceInt * expectedQuantityInt
 	
-	WebUI.verifyNotMatch(actualTitle1, expectedTitle1, false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyNotMatch(actualPrice1, expectedPrice1, false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyNotMatch(actualQuantity1, expectedQuantity1, false, FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyMatch(actualTitle1, expectedTitle1, false, FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyMatch(actualPrice1, expectedPrice1, false, FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyMatch(actualQuantity1, expectedQuantity1, false, FailureHandling.CONTINUE_ON_FAILURE)
 //	WebUI.verifyMatch(actualTotal, expectedTotal, false, FailureHandling.CONTINUE_ON_FAILURE)
 	
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Cart/cart_icon_x'), FailureHandling.CONTINUE_ON_FAILURE)

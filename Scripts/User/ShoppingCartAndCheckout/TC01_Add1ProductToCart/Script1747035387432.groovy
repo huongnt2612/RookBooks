@@ -53,8 +53,8 @@ import internal.GlobalVariable
 	String Price = WebUI.getText(findTestObject('Object Repository/User/Product/product_detail_price'))
 	
 	
-	WebUI.setText(findTestObject('Object Repository/User/input_quantity'), '2')  // Đặt số lượng là 2
-	String Quantity = WebUI.getText(findTestObject('Object Repository/User/input_quantity'))
+	WebUI.setText(findTestObject('Object Repository/User/Cart/input_quantity'), '2')  // Đặt số lượng là 2
+	String Quantity = WebUI.getText(findTestObject('Object Repository/User/Cart/input_quantity'))
 	
 	// lưu trong Excel
 	util.setData(excelPath, 'AddToCard_Tittle1', Title)

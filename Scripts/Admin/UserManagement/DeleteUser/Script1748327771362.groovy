@@ -9,28 +9,28 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable as GlobalVariable
-
-		WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
-	
+//
+//		WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
+//	
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	
-	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/UserManagement/Button_User'), 3)
-	WebUI.click(findTestObject('Object Repository/Admin/UserManagement/Button_User'))
-	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/UserManagement/Button_User_Management'), 3)
-	WebUI.click(findTestObject('Object Repository/Admin/UserManagement/Button_User_Management'))
-	WebUI.delay(3)
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	
+//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/UserManagement/Button_User'), 3)
+//	WebUI.click(findTestObject('Object Repository/Admin/UserManagement/Button_User'))
+//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/UserManagement/Button_User_Management'), 3)
+//	WebUI.click(findTestObject('Object Repository/Admin/UserManagement/Button_User_Management'))
+//	WebUI.delay(3)
 
 	//Lấy email đầu tiên trước khi xóa 
 	TestObject listCategoryEmail = findTestObject('Object Repository/Admin/UserManagement/List_User_Email')
@@ -75,7 +75,7 @@ import internal.GlobalVariable as GlobalVariable
   
   // Lấy email đã lưu trong Excel
   String savedFirstUserEmail = util.getData(excelPath, 'FirstUserEmailBefore')
-  WebUI.verifyMatch(firstUserEmailAfterDelete, savedFirstUserEmail, false,FailureHandling.CONTINUE_ON_FAILURE )
+  WebUI.verifyNotMatch(firstUserEmailAfterDelete, savedFirstUserEmail, false,FailureHandling.CONTINUE_ON_FAILURE )
   
   
    	

@@ -9,25 +9,25 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable as GlobalVariable
-
-	WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
+//
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
 	
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact'))
-	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact_Management'))
-	WebUI.delay(2)
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact'))
+//	WebUI.click(findTestObject('Object Repository/Admin/ContactManagement/Button_Contact_Management'))
+//	WebUI.delay(2)
 	
 	// Click nút "Phản hồi" tại dòng đầu 
 	TestObject btnReplyList = findTestObject('Object Repository/Admin/ContactManagement/List_Button_Reply') 

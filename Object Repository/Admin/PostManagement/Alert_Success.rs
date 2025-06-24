@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_add_to_cart</name>
+   <name>Alert_Success</name>
    <tag></tag>
-   <elementGuidId>603df07d-92a6-4a04-a7b1-cc2d8d214854</elementGuidId>
+   <elementGuidId>7f17f897-7c86-4c56-97b9-6928862ae3e4</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>/html[1]/body[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/a[1]</value>
+         <value>//p[normalize-space()='Thêm sách thành công!']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/a[1]</value>
-      <webElementGuid>84d562c8-6b5f-42f8-831a-830b9b5096df</webElementGuid>
+      <value>//p[normalize-space()='Thêm sách thành công!']</value>
+      <webElementGuid>60549a9e-b9e7-4594-9dcb-bfb86a229c67</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

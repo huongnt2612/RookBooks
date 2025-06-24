@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>OrderManagement</name>
+   <name>ProductBrowsingAndSearch</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>3</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>14645d3c-bd9b-49ce-9074-ffa99990bc6a</testSuiteGuid>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>a745075b-6b24-4c20-b2af-3a7d55211d69</testSuiteGuid>
    <testCaseLink>
-      <guid>6dfed9d7-ed16-4e30-9a2e-987f7f6ead41</guid>
+      <guid>af48eadd-234b-4c70-a56b-617c2347ec9d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/ViewListOrder</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC01_ViewCategories</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>39e1b7de-1d94-442f-b633-8b9424ed93c4</guid>
+      <guid>9ae58cc2-c25e-452e-8ebc-0d076bef9aea</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/CheckPaging</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC02_ViewProductsByCategory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>ebaf5814-91b8-4098-8624-7b34aac55855</guid>
+      <guid>df7ddb08-7ccb-44a9-9866-e7df7fd1bad1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/ViewDetailOrder</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC03_ViewProductDetails1</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>36a0e51c-8f69-425f-8cb9-c3614af71a70</guid>
+      <guid>b01c2767-d680-43f7-bc17-f7a81c433e58</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/SearchOrderByStatus</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC04_ViewProductDetails2</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>0eeb0f02-0a2c-412d-86b1-3e77b53245c3</guid>
+      <guid>2b1e0926-6d02-4172-84f3-f313deb89d40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/UpdateStatusOrderWhenPending</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC05_SearchProductByCategories</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>922a3e88-4016-472a-b96f-e71c5cedac54</guid>
+      <guid>80abb367-8194-4e0f-a8bd-cda41446bd69</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Admin/OrderManagement/UpdateStatusOrderWhenProcessing</testCaseId>
+      <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC06_SearchProductByKey</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

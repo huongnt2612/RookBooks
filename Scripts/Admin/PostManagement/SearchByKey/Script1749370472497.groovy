@@ -1,40 +1,38 @@
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.google.common.collect.FilteredEntryMultimap.Keys
+import org.openqa.selenium.Keys
+
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-import internal.GlobalVariable as GlobalVariable
-
-
-	WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
-	
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
+//	
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	String PostTitle1 = util.getData(excelPath, "PostTitle1")
 	String PostTitle2 = util.getData(excelPath, "PostTitle2")
 	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post'))
-	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post_Management'))
-	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post'))
+//	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post_Management'))
+//	WebUI.delay(2)
 	
 	
 	'1. Search full text'
 	TestObject searchInput = findTestObject('Object Repository/Admin/PostManagement/input_Keyword')
 	WebUI.setText(searchInput, PostTitle1)
-	WebUI.sendKeys(searchInput, Keys.chord(Keys.ENTER))
+	WebUI.sendKeys(searchInput, org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.ENTER))
+	
 	WebUI.delay(2)
 	
 	if (WebUI.verifyElementPresent(findTestObject('Object Repository/Admin/PostManagement/List_Post_Title'), 5, FailureHandling.OPTIONAL)) {

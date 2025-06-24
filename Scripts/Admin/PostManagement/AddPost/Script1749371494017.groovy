@@ -17,24 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-	WebUI.callTestCase(
-		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-	)
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+//		[('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+//	)
 	
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-	
-	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	
-	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post'))
-	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post_Management'))
-	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+//	
+//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	
+//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+//	WebUI.delay(2)
+//	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post'))
+//	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Post_Management'))
+//	WebUI.delay(2)
 	
 	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Add_Post'))
 	
@@ -49,9 +49,11 @@ import org.openqa.selenium.Keys as Keys
 	
 	// Nhập nội dung
 	WebUI.setText(findTestObject('Object Repository/Admin/PostManagement/Input_Content'), 'In this article, we analyze the strengths and weaknesses of AI development vs chip manufacturing...')
+	fc.scrollDown()
 	WebUI.click(findTestObject('Object Repository/Admin/PostManagement/Button_Submit'))
+	WebUI.delay(2)
 	
-	// Kiểm tra thông báo hoặc quay lại trang danh sách
+	// Kiểm tra thông báo
 	WebUI.verifyElementText(findTestObject('Object Repository/Admin/PostManagement/Alert_Success'), 'Thêm bài viết thành công!')
 	
 	

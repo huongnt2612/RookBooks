@@ -40,6 +40,7 @@ import org.openqa.selenium.Keys as Keys
 	WebUI.setText(findTestObject('Object Repository/User/wishlistAndContact/textbox_msg'), message)
 	
 	WebUI.click(findTestObject('Object Repository/User/wishlistAndContact/btn_send_contact'))
+	WebUI.delay(2)
 	fc.scrollDown()
 	
 	WebUI.verifyEqual(findTestObject('Object Repository/User/wishlistAndContact/contact_message'), 'Cảm ơn bạn đã liên hệ')

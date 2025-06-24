@@ -157,7 +157,7 @@ import internal.GlobalVariable as GlobalVariable
 		// Lọc trạng thái "Delivered"
 		
 			filterOptions = driver.findElements(By.xpath(xpath))
-			filterOptions.get(2).click()
+			filterOptions.get(4).click()
 			WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/btn_Filter'))
 			WebUI.delay(2)
 			
@@ -190,7 +190,7 @@ import internal.GlobalVariable as GlobalVariable
 			// Lọc trạng thái "Cancelled"
 			
 				filterOptions = driver.findElements(By.xpath(xpath))
-				filterOptions.get(2).click()
+				filterOptions.get(5).click()
 				WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/btn_Filter'))
 				WebUI.delay(2)
 				

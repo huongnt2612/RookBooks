@@ -24,28 +24,22 @@ import internal.GlobalVariable
 	fc.scrollDown()
 	WebUI.verifyElementText(findTestObject('User/HomePage/tittle_category_1'), 'BÁN CHẠY NHẤT')
 	WebUI.verifyElementPresent(findTestObject('User/HomePage/category_item_1'), 10)
-	
 	fc.scrollDown()
 	WebUI.verifyElementText(findTestObject('Object Repository/User/HomePage/tittle_category_2'), 'SÁCH MỚI')
 	fc.scrollUp()
-	
-	'1. Thêm 1 sp vào giỏ hàng'
+	'1. Thêm 1 sp vào wishlist'
 	String baseXpath = findTestObject('User/HomePage/category_item_1').findPropertyValue('xpath')
 	WebDriver driver = DriverFactory.getWebDriver()
 	List<WebElement> productList = driver.findElements(By.xpath(baseXpath))
 	productList[0].click()
 	fc.scrollDown()
-	
 	// VERIFY trang chi tiết sản phẩm
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/product_detail_image'))
 	WebUI.verifyElementPresent(findTestObject('Object Repository/User/Product/product_tittle'), 10)
 	WebUI.verifyElementPresent(findTestObject('Object Repository/User/Product/product_detail_price'), 10)
-	
 	// Lấy tên và giá sản phẩm thực tế
 	String Title = WebUI.getText(findTestObject('Object Repository/User/Product/product_tittle'))
 	String Price = WebUI.getText(findTestObject('Object Repository/User/Product/product_detail_price'))
-	
-	
 	// lưu trong Excel
 	util.setData(excelPath, 'AddToWishlist_Tittle1', Title)
 	util.setData(excelPath, 'AddToWishlist_Price1', Price)
@@ -58,7 +52,6 @@ import internal.GlobalVariable
 	String alertText = WebUI.getAlertText()
    WebUI.verifyMatch(alertText, 'Đã thêm vào danh sách yêu thích !', false)
    WebUI.acceptAlert()
-	
 	WebUI.delay(3)
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
 	WebUI.click(findTestObject('Object Repository/User/wishlistAndContact/btn_wishlist'))

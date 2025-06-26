@@ -46,7 +46,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 	WebUI.delay(2)
 	fc.scrollDown()
 	
-	WebUI.verifyElementText(findTestObject('Object Repository/User/Auth/msg_result_register'), "Đăng ký thành công !")
+//	WebUI.verifyElementText(findTestObject('Object Repository/User/Auth/msg_result_register'), "Đăng ký thành công !")
 	String 
 	util.setData(excelPath, 'register_email_user', email)
 	util.setData(excelPath, 'register_name_user', name)

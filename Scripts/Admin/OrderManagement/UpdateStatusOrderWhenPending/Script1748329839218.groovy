@@ -12,27 +12,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable as GlobalVariable
 
-//
-//	WebUI.callTestCase(
-//	    findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
-//	    [('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
-//	)
-//	
+	'Đăng nhập admin'
+	WebUI.callTestCase(
+	    findTestCase('Test Cases/Admin/LoginLogout/LO02_login_successfully'),
+	    [('username') : GlobalVariable.Admin_Email, ('password') : GlobalVariable.General_Password]
+	)
+	
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
 	WebDriver driver = DriverFactory.getWebDriver()
-	
-//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
-//	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
-//	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
-//	WebUI.delay(2)
-//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/OrderManagement/Button_Order'), 3)
-//	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Order'))
-//	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/OrderManagement/Button_Order_Management'), 3)
-//	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Order_Management'))
+	'1. Truy cập trang quản lý đơn hàng'
+	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_Accounts'))
+	WebUI.verifyElementVisible(findTestObject('Object Repository/User/HomePage/icon_admin'))
+	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_admin'))
+	WebUI.delay(2)
+	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/OrderManagement/Button_Order'), 3)
+	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Order'))
+	WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/OrderManagement/Button_Order_Management'), 3)
+	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Order_Management'))
 	WebUI.delay(3)
 	
-	// Lọc đơn hàng trạng thái Pending
+	'2. Lọc đơn hàng trạng thái Pending'
 	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Filter_bar'))
 	WebUI.delay(2)
 	TestObject filterList = findTestObject('Object Repository/Admin/OrderManagement/Filter_List_Option')
@@ -42,27 +42,22 @@ import internal.GlobalVariable as GlobalVariable
 	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/btn_Filter'))
 	WebUI.delay(2)
 	
-	// Lấy nút Chi tiết đơn hàng đầu tiên
+	'3. Lấy nút Chi tiết đơn hàng đầu tiên'
 	TestObject detailButtons = findTestObject('Object Repository/Admin/OrderManagement/List_Button_Detail')
 	List<WebElement> detailButtonElements = WebUiCommonHelper.findWebElements(detailButtons, 10)
-	
 	if (detailButtonElements.size() > 0) {
 	    // Click vào chi tiết đơn hàng đầu tiên
 	    detailButtonElements.get(0).click()
 	    WebUI.delay(2)
-	    
 	    // Kiểm tra trạng thái đơn hàng
 	    TestObject detailInfoList = findTestObject('Object Repository/Admin/OrderManagement/Detail_Order_Info')
 	    List<WebElement> detailInfoElements = WebUiCommonHelper.findWebElements(detailInfoList, 10)
-	    
 	    if (detailInfoElements.size() > 6) {
 	        String fullText = detailInfoElements.get(6).getText().trim()
 	        String currentStatus = fullText.split(":")[1].trim()
-	        
 	        if (currentStatus.equalsIgnoreCase("Pending")) {
 	            // Xử lý đơn hàng: ví dụ xử lý (processOrder = true)
 	            boolean processOrder = true
-	            
 	            if (processOrder) {
 	                WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Process_Order'))
 	                WebUI.delay(2)
@@ -70,7 +65,6 @@ import internal.GlobalVariable as GlobalVariable
 	                WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Cancelled_Order'))
 	                WebUI.delay(2)
 	            }
-	            
 	            // Kiểm tra trạng thái cập nhật lại
 	            detailInfoElements = WebUiCommonHelper.findWebElements(detailInfoList, 10)
 	            fullText = detailInfoElements.get(6).getText().trim()
@@ -78,7 +72,6 @@ import internal.GlobalVariable as GlobalVariable
 	            WebUI.verifyEqual(updatedStatus.toLowerCase(), processOrder ? "processing" : "cancelled")
 	        } 
 	    }
-	    
 	  	WebUI.click(findTestObject('Object Repository/Admin/OrderManagement/Button_Back_List_Orderf'))
 	    WebUI.delay(2)
 	}

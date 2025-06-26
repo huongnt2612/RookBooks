@@ -20,7 +20,6 @@ import internal.GlobalVariable
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()
 	String excelPath = 'Data Files/Data.xlsx'
-
 	' Xác minh danh mục "BÁN CHẠY NHẤT" có hiển thị'
 	fc.scrollDown()
 	WebUI.verifyElementText(findTestObject('User/HomePage/tittle_category_1'), 'BÁN CHẠY NHẤT')
@@ -35,12 +34,6 @@ import internal.GlobalVariable
 	WebDriver driver = DriverFactory.getWebDriver()
 	List<WebElement> productList = driver.findElements(By.xpath(baseXpath))
 	productList[0].click()
-	
-//	WebElement element = productList[0]
-//	JavascriptExecutor js = (JavascriptExecutor) driver
-//	js.executeScript("arguments[0].scrollIntoView(true);", element)
-//	WebUI.delay(1)
-//	js.executeScript("arguments[0].click();", element)
 	fc.scrollDown()
 	
 	// VERIFY trang chi tiết sản phẩm
@@ -51,8 +44,6 @@ import internal.GlobalVariable
 	// Lấy tên và giá sản phẩm thực tế
 	String Title = WebUI.getText(findTestObject('Object Repository/User/Product/product_tittle'))
 	String Price = WebUI.getText(findTestObject('Object Repository/User/Product/product_detail_price'))
-	
-	
 	WebUI.setText(findTestObject('Object Repository/User/Cart/input_quantity'), '2')  // Đặt số lượng là 2
 	String Quantity = WebUI.getText(findTestObject('Object Repository/User/Cart/input_quantity'))
 	
@@ -65,11 +56,8 @@ import internal.GlobalVariable
 	WebUI.click(findTestObject('Object Repository/User/Cart/btn_add_to_card'))
 	
 	//Chờ và kiểm tra Alert
-	WebUI.waitForAlert(2)  // Chờ Alert xuất hiện
-//	WebUI.verifyAlertPresent()  // Kiểm tra xem Alert có xuất hiện hay không
-	//Chấp nhận Alert (Nhấn OK)
+	WebUI.waitForAlert(2)
 	WebUI.acceptAlert()
-	
 	WebUI.delay(3)
 	WebUI.click(findTestObject('Object Repository/User/HomePage/icon_cart'))
 	fc.scrollDown()
@@ -80,18 +68,11 @@ import internal.GlobalVariable
 	String actualTitle = WebUI.getText(findTestObject('Object Repository/User/Cart/cart_product_name'))
 	String actualPrice = WebUI.getText(findTestObject('Object Repository/User/Cart/cart_product_price'))
 	String actualQuantity = WebUI.getText(findTestObject('Object Repository/User/Cart/cart_product_quantity'))
-	
 	String actualTotal = WebUI.getText(findTestObject('Object Repository/User/Cart/cart_product_total_price'))
-	
-//	int expectedPriceInt = Integer.parseInt(expectedPrice)
-//	int expectedQuantityInt = Integer.parseInt(expectedQuantity)
-//	int expectedTotal = expectedPriceInt * expectedQuantityInt	
 	
 	WebUI.verifyMatch(actualTitle, expectedTitle, false, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyMatch(actualPrice, expectedPrice, false, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyMatch(actualQuantity, expectedQuantity, false, FailureHandling.CONTINUE_ON_FAILURE)
-//	WebUI.verifyMatch(actualTotal, expectedTotal, false, FailureHandling.CONTINUE_ON_FAILURE)
-	
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Cart/cart_icon_x'), FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Cart/btn_payment'), FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Cart/btn_cart_total_amount'), FailureHandling.CONTINUE_ON_FAILURE)

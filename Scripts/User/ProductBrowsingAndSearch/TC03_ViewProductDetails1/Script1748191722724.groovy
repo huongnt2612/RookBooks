@@ -18,26 +18,20 @@ import openPage
 	dataFileUtil util = new dataFileUtil()
 	
 	// Lấy dữ liệu từ Excel (dựng dữ liệu kỳ vọng)
-	String expectedTitle = util.getData(excelPath, 'book_title_0')
-	String expectedPrice = util.getData(excelPath, 'book_price_current_0')
+	String expectedTitle = util.getData(excelPath, 'book_title')
+	String expectedPrice = util.getData(excelPath, 'book_price_current')
 	
-//	// Xác minh danh mục "BÁN CHẠY NHẤT"
-//	WebUI.verifyElementText(findTestObject('User/HomePage/tittle_category_1'), 'BÁN CHẠY NHẤT')
-//	WebUI.verifyElementPresent(findTestObject('User/HomePage/category_item_1'), 10)
-//	
 	// Lấy danh sách sản phẩm và click vào sản phẩm đầu tiên
 	String baseXpath = findTestObject('User/HomePage/category_item_1').findPropertyValue('xpath')
 	WebDriver driver = DriverFactory.getWebDriver()
 	List<WebElement> productList = driver.findElements(By.xpath(baseXpath))
 	productList[0].click()
-	
 	fc.scrollDown()
-	
 	// VERIFY trang chi tiết sản phẩm
 	WebUI.verifyElementVisible(findTestObject('Object Repository/User/Product/product_detail_image'))
 	WebUI.verifyElementPresent(findTestObject('Object Repository/User/Product/product_tittle'), 10)
 	WebUI.verifyElementPresent(findTestObject('Object Repository/User/Product/product_detail_price'), 10)
-	
+
 	// Lấy tên và giá sản phẩm thực tế
 	String actualTitle = WebUI.getText(findTestObject('Object Repository/User/Product/product_tittle'))
 	String actualPrice = WebUI.getText(findTestObject('Object Repository/User/Product/product_detail_price'))
@@ -62,9 +56,7 @@ import openPage
 	
 	// Duyệt qua từng dòng trong bảng và lấy dữ liệu
 	for (int i = 0; i < rows.size(); i++) {
-	    // Lấy giá trị từng dòng từ bảng
 	    String rowData = rows.get(i).getText().trim()
-	    // Ghi vào Excel
 	    util.setData(excelPath, "1.product_detail_info_${i}", rowData)
 	}
 	
@@ -72,8 +64,6 @@ import openPage
 	for (int i = 0; i < rows.size(); i++) {
 	    String expectedData = util.getData(excelPath, "1.product_detail_info_${i}")
 	    String actualData = rows.get(i).getText().trim()
-	    
-	    // Kiểm tra xem giá trị đã lấy có khớp với dữ liệu trong bảng không
 	    WebUI.verifyMatch(actualData, expectedData, false)
 	}
 	WebUI.back()

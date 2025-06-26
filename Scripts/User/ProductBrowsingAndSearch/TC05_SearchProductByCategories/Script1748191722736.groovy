@@ -8,7 +8,7 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-	
+	new openPage().navigateToHomePage()
 //	new openPage().navigateToHomePage()
 	generalFunction fc = new generalFunction()
 	dataFileUtil util = new dataFileUtil()

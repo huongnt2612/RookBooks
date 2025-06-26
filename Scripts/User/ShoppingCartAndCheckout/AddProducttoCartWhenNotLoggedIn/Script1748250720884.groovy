@@ -21,17 +21,12 @@ import org.openqa.selenium.Keys as Keys
 import generalFunction
 
 	generalFunction fc = new generalFunction()
-
-
 	WebUI.openBrowser('')
 	WebUI.navigateToUrl(GlobalVariable.HomePage_url)
 	WebUI.maximizeWindow()
 	WebUI.delay(2)
-
-
 	WebUI.deleteAllCookies()
 	fc.scrollDown()
-	
 	WebUI.delay(2)
 	TestObject productBlock = findTestObject('User/Product/product_block')
 	WebUI.mouseOver(productBlock)
@@ -39,7 +34,6 @@ import generalFunction
 	
 	// click add to cart thi hover
 	WebUI.click(findTestObject('Object Repository/User/Product/btn_add_to_cart'),  FailureHandling.CONTINUE_ON_FAILURE)
-	
 	WebUI.waitForAlert(5)
 	String alertText = WebUI.getAlertText()
 	WebUI.verifyMatch(alertText, 'Bạn cần đăng nhập trước', false)
@@ -48,7 +42,6 @@ import generalFunction
 	fc.scrollDown()
 	
 	// Kiểm tra hệ thốngchuyển hướng đến trang đăng nhập
-	
 	String currentUrl = WebUI.getUrl()
 	boolean matched = WebUI.verifyMatch(currentUrl.toLowerCase(), '.*login.*', true, FailureHandling.CONTINUE_ON_FAILURE)
 

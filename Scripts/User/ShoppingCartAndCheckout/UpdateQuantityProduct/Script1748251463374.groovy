@@ -10,11 +10,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 	generalFunction fc = new generalFunction()
-	WebUI.callTestCase(
-		findTestCase('Test Cases/User/LoginLogout/LO04_login_successfully'),
-		[('username') : GlobalVariable.User_Email, ('password') : GlobalVariable.General_Password]
-	)
-	
+//	WebUI.callTestCase(
+//		findTestCase('Test Cases/User/LoginLogout/LO04_login_successfully'),
+//		[('username') : GlobalVariable.User_Email, ('password') : GlobalVariable.General_Password]
+//	)
+//	
 	// Mở trang giỏ hàng
 	WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/User/HomePage/icon_cart'))

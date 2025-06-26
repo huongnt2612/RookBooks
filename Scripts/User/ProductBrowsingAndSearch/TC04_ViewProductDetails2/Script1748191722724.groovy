@@ -28,8 +28,8 @@ import openPage
 	fc.scrollDown()
 
 	// Lấy dữ liệu từ Excel (dựng dữ liệu kỳ vọng)
-	String expectedTitle = util.getData(excelPath, 'book_title_1')
-	String expectedPrice = util.getData(excelPath, 'book_price_current_1')
+	String expectedTitle = util.getData(excelPath, 'book_title1')
+	String expectedPrice = util.getData(excelPath, 'book_price_current1')
 //	
 //	// Xác minh danh mục "BÁN CHẠY NHẤT"
 //	WebUI.verifyElementText(findTestObject('User/HomePage/tittle_category_1'), 'BÁN CHẠY NHẤT')

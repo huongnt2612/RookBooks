@@ -33,7 +33,7 @@ import internal.GlobalVariable as GlobalVariable
 	WebUI.delay(2)
 	
 
-	TestObject contactTableRows = findTestObject('Object Repository/Admin/ContactManagement/table_ContactRows') // XPath: //table/tbody/tr
+	TestObject contactTableRows = findTestObject('Object Repository/Admin/ContactManagement/table_ContactRows')
 	List<WebElement> rows = WebUiCommonHelper.findWebElements(contactTableRows, 10)
 	
 

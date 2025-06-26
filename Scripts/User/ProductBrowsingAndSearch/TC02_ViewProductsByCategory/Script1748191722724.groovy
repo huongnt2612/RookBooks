@@ -48,6 +48,9 @@ import generalFunction
 	List<WebElement> oldPriceElems = firstProduct.findElements(By.xpath(oldPriceXpath0))
 	String oldPrice = oldPriceElems.size() > 0 ? oldPriceElems[0].getText() : ""
 
+	util.setData(excelPath, 'book_title', title)
+	util.setData(excelPath, 'book_price_current', currentPrice)
+	util.setData(excelPath, 'book_price_old', oldPrice)
 	
 	'Lấy phần tử thứ 2 trong danh sách sản phẩm "BÁN CHẠY NHẤT'
 	WebElement secondProduct = productList.get(1)  // sản phẩm thứ 2
@@ -65,10 +68,8 @@ import generalFunction
 	String oldPrice1 = oldPriceElems1.size() > 0 ? oldPriceElems1[0].getText() : ""
 	
 	// Lưu vào file Excel
-	util.setData(excelPath, 'book_title_0', title)
-	util.setData(excelPath, 'book_price_current_0', currentPrice)
-	util.setData(excelPath, 'book_price_old_0', oldPrice)
-	util.setData(excelPath, 'book_title_1', title1)
-	util.setData(excelPath, 'book_price_current_1', currentPrice1)
-	util.setData(excelPath, 'book_price_old_1', oldPrice1)
+
+	util.setData(excelPath, 'book_title1', title1)
+	util.setData(excelPath, 'book_price_current1', currentPrice1)
+	util.setData(excelPath, 'book_price_old1', oldPrice1)
 	

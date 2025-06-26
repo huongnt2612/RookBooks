@@ -42,14 +42,14 @@
    <testCaseLink>
       <guid>2b1e0926-6d02-4172-84f3-f313deb89d40</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC05_SearchProductByCategories</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>80abb367-8194-4e0f-a8bd-cda41446bd69</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/User/ProductBrowsingAndSearch/TC06_SearchProductByKey</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
